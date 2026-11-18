@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kroniki Cienia — Portal Gry RPG</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="hero">
+        <div class="container">
+            <span class="badge">Turowa Gra Przeglądarkowa RPG</span>
+            <h1>Kroniki Cienia</h1>
+            <p class="subtitle">Wkrocz do mrocznego świata zapomnianych krain, podejmuj trudne decyzje i zapisz swoją historię w cieniu upadłych imperiów.</p>
+            <div class="hero-actions">
+                <a href="#graj" class="btn btn-primary">Zagraj na stronie</a>
+                <a href="https://markucjusz.github.io/kroniki-cienia/" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">Otwórz na pełnym ekranie ↗</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Sekcja Osadzonej Gry -->
+        <section id="graj" class="section game-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Rozgrywka</h2>
+                    <p>Graj bezpośrednio tutaj lub uruchom grę w osobnej karcie przeglądarki.</p>
+                </div>
+                <div class="iframe-wrapper">
+                    <iframe 
+                        id="game-frame"
+                        src="https://markucjusz.github.io/kroniki-cienia/" 
+                        title="Kroniki Cienia - Gra RPG"
+                        loading="lazy"
+                        allowfullscreen>
+                    </iframe>
+                </div>
+                <div class="game-controls-bar">
+                    <button type="button" onclick="reloadGame()" class="btn-small">↻ Odśwież okno gry</button>
+                    <a href="https://markucjusz.github.io/kroniki-cienia/" target="_blank" rel="noopener noreferrer" class="btn-small">Otwórz w nowej karcie ↗</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sekcja Świat i Fabuła -->
+        <section id="swiat" class="section world-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Świat i Fabuła</h2>
+                    <p>Poznaj tło wydarzeń, zanim wyruszysz w pierwszą podróż.</p>
+                </div>
+                <div class="lore-grid">
+                    <article class="card">
+                        <h3>Cień nad Krainą</h3>
+                        <p>Po upadku dawnego przymierza granice między światłem a mrokiem zaczęły się zacierać. Wędrowcy, najemnicy i poszukiwacze wiedzy przemierzają zrujnowane trakty, szukając odpowiedzi na to, co obudziło się w głębi zapomnianych ruin.</p>
+                    </article>
+                    <article class="card">
+                        <h3>Turowa Taktyka</h3>
+                        <p>Każde starcie wymaga planowania. Zarządzaj zasobami, wykorzystuj zdolności swojej postaci i reaguj na ruchy przeciwników. Przypadek rzadko ratuje życie na nieznanym szlaku.</p>
+                    </article>
+                    <article class="card">
+                        <h3>Rozwój i Wybory</h3>
+                        <p>Twoje decyzje kształtują przebieg wyprawy. Zdobywaj doświadczenie, ulepszaj ekwipunek i odkrywaj sekrety świata ukryte poza głównym szlakiem.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sekcja Dziennik Zmian / Aktualności -->
+        <section id="aktualnosci" class="section news-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Kronika Rozwoju</h2>
+                    <p>Aktualny status projektu i kierunek dalszych prac.</p>
+                </div>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <span class="date">Etap 1 — Portal Społeczności</span>
+                        <h4>Uruchomienie bazy wiedzy i miejsca dyskusji</h4>
+                        <p>Oddanie w ręce graczy strony informacyjnej połączonej bezpośrednio z aktualną wersją gry oraz otwarcie sekcji komentarzy dla testerów.</p>
+                    </div>
+                    <div class="timeline-item">
+                        <span class="date">Wersja bieżąca</span>
+                        <h4>Rdzeń rozgrywki dostępny online</h4>
+                        <p>Podstawowa mechanika turowa, eksploracja oraz system walki dostępne bez instalacji bezpośrednio w przeglądarce.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sekcja Komentarze (Giscus) -->
+        <section id="komentarze" class="section comments-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Karczma — Rozmowy i Uwagi Graczy</h2>
+                    <p>Podziel się opinią o rozgrywce, zgłoś błąd lub zaproponuj pomysł na rozwój świata. Wymagane bezpłatne konto GitHub.</p>
+                </div>
+                
+                <div class="giscus-container">
+                    <!-- INSTRUKCJA: Po włączeniu GitHub Discussions w nowym repozytorium wejdź na https://giscus.app/pl, 
+                         wygeneruj swój kod dla repozytorium markucjusz/kroniki-cienia-portal i zastąp poniższy blok -->
+                    <div class="giscus-placeholder">
+                        <p><strong>Miejsce na moduł komentarzy Giscus</strong></p>
+                        <p>Aby aktywować komentarze na żywo:</p>
+                        <ol>
+                            <li>Włącz <em>Discussions</em> w ustawieniach nowego repozytorium na GitHubie.</li>
+                            <li>Wejdź na <a href="https://giscus.app/pl" target="_blank" rel="noopener noreferrer">giscus.app/pl</a> i wpisz nazwę repozytorium (np. <code>markucjusz/kroniki-cienia-portal</code>).</li>
+                            <li>Skopiuj wygenerowany tag <code>&lt;script&gt;</code> i wklej go w tym miejscu w pliku <code>index.html</code>.</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 Kroniki Cienia — Projekt by <a href="https://github.com/markucjusz" target="_blank" rel="noopener noreferrer">markucjusz</a></p>
+        </div>
+    </footer>
+
+    <script>
+        function reloadGame() {
+            const frame = document.getElementById('game-frame');
+            frame.src = frame.src;
+        }
+    </script>
+</body>
+</html>

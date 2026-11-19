@@ -8,6 +8,18 @@
 </head>
 <body>
 
+    <nav class="navbar">
+        <div class="container nav-content">
+            <a href="#" class="nav-logo">⚔️ Kroniki <span>Cienia</span></a>
+            <ul class="nav-links">
+                <li><a href="#graj">Rozgrywka</a></li>
+                <li><a href="#swiat">Świat i Fabuła</a></li>
+                <li><a href="#aktualnosci">Kronika</a></li>
+                <li><a href="#komentarze">Karczma</a></li>
+            </ul>
+        </div>
+    </nav>
+
     <header class="hero">
         <div class="container">
             <span class="badge">Turowa Gra Przeglądarkowa RPG</span>
@@ -15,7 +27,7 @@
             <p class="subtitle">Wkrocz do mrocznego świata zapomnianych krain, podejmuj trudne decyzje i zapisz swoją historię w cieniu upadłych imperiów.</p>
             <div class="hero-actions">
                 <a href="#graj" class="btn btn-primary">Zagraj na stronie</a>
-                <a href="https://markucjusz.github.io/kroniki-cienia/" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">Otwórz na pełnym ekranie ↗</a>
+                <a href="https://markucjusz.github.io/kroniki-cienia/" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">Otwórz w osobnej karcie ↗</a>
             </div>
         </div>
     </header>
@@ -26,7 +38,7 @@
             <div class="container">
                 <div class="section-header">
                     <h2>Rozgrywka</h2>
-                    <p>Graj bezpośrednio tutaj lub uruchom grę w osobnej karcie przeglądarki.</p>
+                    <p>Graj bezpośrednio w oknie poniżej lub przełącz widok na pełny ekran.</p>
                 </div>
                 <div class="iframe-wrapper">
                     <iframe 
@@ -39,7 +51,7 @@
                 </div>
                 <div class="game-controls-bar">
                     <button type="button" onclick="reloadGame()" class="btn-small">↻ Odśwież okno gry</button>
-                    <a href="https://markucjusz.github.io/kroniki-cienia/" target="_blank" rel="noopener noreferrer" class="btn-small">Otwórz w nowej karcie ↗</a>
+                    <button type="button" onclick="toggleFullscreen()" class="btn-small">⛶ Pełny ekran</button>
                 </div>
             </div>
         </section>
@@ -97,22 +109,23 @@
                     <h2>Karczma — Rozmowy i Uwagi Graczy</h2>
                     <p>Podziel się opinią o rozgrywce, zgłoś błąd lub zaproponuj pomysł na rozwój świata. Wymagane bezpłatne konto GitHub.</p>
                 </div>
-                
-                <script src="https://giscus.app/client.js"
-                        data-repo="Markucjusz/kroniki-cienia-portal"
-                        data-repo-id="R_kgDOVzqE6A"
-                        data-category="General"
-                        data-category-id="DIC_kwDOVzqE6M4DLdMK"
-                        data-mapping="pathname"
-                        data-strict="0"
-                        data-reactions-enabled="1"
-                        data-emit-metadata="0"
-                        data-input-position="bottom"
-                        data-theme="transparent_dark"
-                        data-lang="pl"
-                        crossorigin="anonymous"
-                        async>
-                </script>
+                <div class="giscus-container">
+                    <script src="https://giscus.app/client.js"
+                            data-repo="Markucjusz/kroniki-cienia-portal"
+                            data-repo-id="R_kgDOVzqE6A"
+                            data-category="General"
+                            data-category-id="DIC_kwDOVzqE6M4DLdMK"
+                            data-mapping="pathname"
+                            data-strict="0"
+                            data-reactions-enabled="1"
+                            data-emit-metadata="0"
+                            data-input-position="bottom"
+                            data-theme="transparent_dark"
+                            data-lang="pl"
+                            crossorigin="anonymous"
+                            async>
+                    </script>
+                </div>
             </div>
         </section>
     </main>
@@ -128,6 +141,17 @@
             const frame = document.getElementById('game-frame');
             if (frame) {
                 frame.src = frame.src;
+            }
+        }
+
+        function toggleFullscreen() {
+            const frame = document.getElementById('game-frame');
+            if (!frame) return;
+
+            if (frame.requestFullscreen) {
+                frame.requestFullscreen();
+            } else if (frame.webkitRequestFullscreen) {
+                frame.webkitRequestFullscreen();
             }
         }
     </script>

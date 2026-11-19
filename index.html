@@ -98,34 +98,37 @@
                     <p>Podziel się opinią o rozgrywce, zgłoś błąd lub zaproponuj pomysł na rozwój świata. Wymagane bezpłatne konto GitHub.</p>
                 </div>
                 
-              <script src="https://giscus.app/client.js"
-        data-repo="Markucjusz/kroniki-cienia-portal"
-        data-repo-id="R_kgDOVzqE6A"
-        data-category="General"
-        data-category-id="DIC_kwDOVzqE6M4DLdMK"
-        data-mapping="pathname"
-        data-strict="0"
-        data-reactions-enabled="1"
-        data-emit-metadata="0"
-        data-input-position="bottom"
-        data-theme="transparent_dark"
-        data-lang="pl"
-        crossorigin="anonymous"
-        async>
-</script>
-        </div>
-    </div>
-</section>
-</main>
+                <script src="https://giscus.app/client.js"
+                        data-repo="Markucjusz/kroniki-cienia-portal"
+                        data-repo-id="R_kgDOVzqE6A"
+                        data-category="General"
+                        data-category-id="DIC_kwDOVzqE6M4DLdMK"
+                        data-mapping="pathname"
+                        data-strict="0"
+                        data-reactions-enabled="1"
+                        data-emit-metadata="0"
+                        data-input-position="bottom"
+                        data-theme="transparent_dark"
+                        data-lang="pl"
+                        crossorigin="anonymous"
+                        async>
+                </script>
+            </div>
+        </section>
+    </main>
 
-<footer class="footer">
-    <div class="container">
-        <p>&copy; 2026 Kroniki Cienia — Projekt by <a href="https://github.com/markucjusz" target="_blank" rel="noopener noreferrer">markucjusz</a></p>
-    </div>
-</footer>
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 Kroniki Cienia — Projekt by <a href="https://github.com/markucjusz" target="_blank" rel="noopener noreferrer">markucjusz</a></p>
+        </div>
+    </footer>
+
+    <script>
         function reloadGame() {
             const frame = document.getElementById('game-frame');
-            frame.src = frame.src;
+            if (frame) {
+                frame.src = frame.src;
+            }
         }
     </script>
 </body>

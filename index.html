@@ -4,6 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kroniki Cienia — Portal Gry RPG</title>
+    <meta name="description" content="Turowa gra przeglądarkowa RPG w klimacie dark fantasy. Wkrocz do mrocznego świata zapomnianych krain, walcz i zapisz swoją historię.">
+    
+    <!-- Open Graph / Social Media -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://markucjusz.github.io/">
+    <meta property="og:title" content="Kroniki Cienia — Turowa Gra Przeglądarkowa RPG">
+    <meta property="og:description" content="Wkrocz do mrocznego świata zapomnianych krain, podejmuj trudne decyzje i przetrwaj w cieniu upadłych imperiów.">
+    <meta property="og:locale" content="pl_PL">
+
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -13,7 +22,8 @@
             <a href="#" class="nav-logo">⚔️ Kroniki <span>Cienia</span></a>
             <ul class="nav-links">
                 <li><a href="#graj">Rozgrywka</a></li>
-                <li><a href="#swiat">Świat i Fabuła</a></li>
+                <li><a href="#swiat">Świat</a></li>
+                <li><a href="#poradnik">Poradnik</a></li>
                 <li><a href="#aktualnosci">Kronika</a></li>
                 <li><a href="#komentarze">Karczma</a></li>
             </ul>
@@ -80,6 +90,26 @@
             </div>
         </section>
 
+        <!-- Sekcja Poradnik i Zapis Gry -->
+        <section id="poradnik" class="section guide-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Poradnik Wędrowca</h2>
+                    <p>Podstawowe zasady przetrwania i zabezpieczania postępów w grze.</p>
+                </div>
+                <div class="guide-grid">
+                    <div class="card">
+                        <h3>1. Eksploracja i Walka</h3>
+                        <p>Zwracaj uwagę na punkty wytrzymałości oraz zasoby przed wejściem na trudniejsze lokacje. Walka odbywa się w systemie turowym — kolejność ruchów i odpowiedni dobór umiejętności decydują o przetrwaniu.</p>
+                    </div>
+                    <div class="card">
+                        <h3>2. Kopia Zapasowa Postaci (Base64)</h3>
+                        <p>Gra zapisuje stan automatycznie w pamięci przeglądarki (LocalStorage). Jeśli czyścisz dane przeglądarki lub chcesz przenieść postać na inne urządzenie, skorzystaj w grze z opcji <strong>Eksportuj zapis</strong> i zachowaj wygenerowany kod tekstowy.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <!-- Sekcja Dziennik Zmian / Aktualności -->
         <section id="aktualnosci" class="section news-section">
             <div class="container">
@@ -102,13 +132,22 @@
             </div>
         </section>
 
-        <!-- Sekcja Komentarze (Giscus) -->
+        <!-- Sekcja Komentarze i Zgłoszenia (Giscus + GitHub Issues) -->
         <section id="komentarze" class="section comments-section">
             <div class="container">
                 <div class="section-header">
                     <h2>Karczma — Rozmowy i Uwagi Graczy</h2>
-                    <p>Podziel się opinią o rozgrywce, zgłoś błąd lub zaproponuj pomysł na rozwój świata. Wymagane bezpłatne konto GitHub.</p>
+                    <p>Podziel się opinią o rozgrywce, zgłoś błąd lub zaproponuj pomysł na rozwój świata.</p>
                 </div>
+
+                <div class="feedback-bar">
+                    <div class="feedback-info">
+                        <strong>Znalazłeś błąd w mechanice lub literówkę?</strong>
+                        <span>Zgłoś go bezpośrednio w rejestrze błędów projektu, aby szybciej trafił do poprawki.</span>
+                    </div>
+                    <a href="https://github.com/markucjusz/kroniki-cienia/issues/new" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">🐞 Zgłoś błąd na GitHubie ↗</a>
+                </div>
+
                 <div class="giscus-container">
                     <script src="https://giscus.app/client.js"
                             data-repo="Markucjusz/kroniki-cienia-portal"

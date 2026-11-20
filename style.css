@@ -66,7 +66,7 @@ body {
 
 .nav-links {
     display: flex;
-    gap: 20px;
+    gap: 18px;
     list-style: none;
 }
 
@@ -226,10 +226,16 @@ body {
     border-color: var(--accent);
 }
 
-/* Lore Cards */
+/* Lore & Guide Cards */
 .lore-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+    gap: 24px;
+}
+
+.guide-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
     gap: 24px;
 }
 
@@ -256,6 +262,10 @@ body {
 .card p {
     color: var(--text-muted);
     font-size: 0.96rem;
+}
+
+.card strong {
+    color: var(--text-main);
 }
 
 /* Timeline */
@@ -295,7 +305,36 @@ body {
     font-size: 0.95rem;
 }
 
-/* Comments / Giscus */
+/* Feedback Bar & Giscus */
+.feedback-bar {
+    max-width: 820px;
+    margin: 0 auto 32px;
+    background-color: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 20px 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.feedback-info {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.feedback-info strong {
+    color: #ffffff;
+    font-size: 1rem;
+}
+
+.feedback-info span {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+}
+
 .giscus-container {
     max-width: 820px;
     margin: 0 auto;
@@ -340,6 +379,15 @@ body {
         height: 76vh;
         min-height: 520px;
     }
+
+    .feedback-bar {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .feedback-bar .btn {
+        width: 100%;
+    }
 }
 
 @media (max-width: 540px) {
@@ -352,11 +400,11 @@ body {
     }
 
     .nav-links {
-        gap: 16px;
+        gap: 12px;
     }
 
     .nav-links a {
-        font-size: 0.85rem;
+        font-size: 0.82rem;
     }
 
     .hero-actions {

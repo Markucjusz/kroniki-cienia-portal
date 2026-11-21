@@ -426,3 +426,11 @@ body {
         text-align: center;
     }
 }
+<footer class="other-projects-footer">
+    <div class="footer-content">
+        <span class="footer-label">Inne moje projekty:</span>
+        <a href="https://markucjusz.github.io/Odkrywam-Przyszlosc/" target="_blank" rel="noopener noreferrer" class="project-link">
+            🚀 Odkrywam Przyszłość — Radar odkryć naukowych, AI i kosmosu ↗
+        </a>
+    </div>
+</footer>

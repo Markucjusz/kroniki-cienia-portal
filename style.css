@@ -357,6 +357,37 @@ body {
     text-decoration: underline;
 }
 
+/* Inne projekty w stopce */
+.other-projects {
+    margin-top: 14px;
+    padding-top: 14px;
+    border-top: 1px solid var(--border-color);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+}
+
+.project-badge-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 4px 12px;
+    border-radius: 6px;
+    background-color: var(--bg-card);
+    border: 1px solid var(--border-color);
+    color: #38bdf8 !important;
+    font-weight: 600;
+    transition: border-color 0.2s ease, background-color 0.2s ease;
+}
+
+.project-badge-link:hover {
+    background-color: var(--bg-card-hover);
+    border-color: #38bdf8;
+    text-decoration: none !important;
+}
+
 /* Mobile Adjustments */
 @media (max-width: 768px) {
     .hero {
@@ -426,11 +457,3 @@ body {
         text-align: center;
     }
 }
-<footer class="other-projects-footer">
-    <div class="footer-content">
-        <span class="footer-label">Inne moje projekty:</span>
-        <a href="https://markucjusz.github.io/Odkrywam-Przyszlosc/" target="_blank" rel="noopener noreferrer" class="project-link">
-            🚀 Odkrywam Przyszłość — Radar odkryć naukowych, AI i kosmosu ↗
-        </a>
-    </div>
-</footer>

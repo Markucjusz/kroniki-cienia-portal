@@ -4,16 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kroniki Cienia — Portal Gry RPG</title>
-    <meta name="description" content="Turowa gra przeglądarkowa RPG w klimacie dark fantasy. Wkrocz do mrocznego świata zapomnianych krain, walcz i zapisz swoją historię.">
-    
-    <!-- Ikona karty przeglądarki (Favicon SVG) -->
-    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%23161a23'/><text y='.9em' font-size='75' x='12'>⚔️</text></svg>">
+    <meta name="description" content="Oficjalny portal turowej gry RPG Kroniki Cienia. Graj w przeglądarce, poznaj mechaniki i śledź aktualizacje wydania 5.1.">
 
-    <!-- Open Graph / Social Media -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%23161a23'/><text y='.75em' x='.12em' font-size='72'>⚔</text></svg>">
+
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://markucjusz.github.io/kroniki-cienia-portal/">
     <meta property="og:title" content="Kroniki Cienia — Turowa Gra Przeglądarkowa RPG">
-    <meta property="og:description" content="Wkrocz do mrocznego świata zapomnianych krain, podejmuj trudne decyzje i przetrwaj w cieniu upadłych imperiów.">
+    <meta property="og:description" content="Wkrocz do mrocznego świata, walcz turowo i śledź aktualizacje wersji 5.1.">
     <meta property="og:locale" content="pl_PL">
     <meta property="og:image" content="https://markucjusz.github.io/kroniki-cienia-portal/preview.jpg">
     <meta property="og:image:width" content="1200">
@@ -28,6 +26,7 @@
             <a href="#" class="nav-logo">⚔️ Kroniki <span>Cienia</span></a>
             <ul class="nav-links">
                 <li><a href="#graj">Rozgrywka</a></li>
+                <li><a href="#nowosci">Co nowego</a></li>
                 <li><a href="#swiat">Świat</a></li>
                 <li><a href="#poradnik">Poradnik</a></li>
                 <li><a href="#aktualnosci">Kronika</a></li>
@@ -38,7 +37,7 @@
 
     <header class="hero">
         <div class="container">
-            <span class="badge">Turowa Gra Przeglądarkowa RPG</span>
+            <span class="badge">Wersja 5.1 • Turowa gra przeglądarkowa RPG</span>
             <h1>Kroniki Cienia</h1>
             <p class="subtitle">Wkrocz do mrocznego świata zapomnianych krain, podejmuj trudne decyzje i zapisz swoją historię w cieniu upadłych imperiów.</p>
             <div class="hero-actions">
@@ -46,13 +45,12 @@
                 <a href="https://markucjusz.github.io/kroniki-cienia/" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">Otwórz w osobnej karcie ↗</a>
             </div>
             <p style="margin-top: 20px; font-size: 0.85rem; color: var(--text-muted);">
-                Status projektu: <strong style="color: var(--accent);">Wersja Alpha • Dostępna do testów</strong>
+                Status projektu: <strong style="color: var(--accent);">Wersja stabilna 5.1 • Dostępna do testów</strong>
             </p>
         </div>
     </header>
 
     <main>
-        <!-- Sekcja Osadzonej Gry -->
         <section id="graj" class="section game-section">
             <div class="container">
                 <div class="section-header">
@@ -60,22 +58,44 @@
                     <p>Graj bezpośrednio w oknie poniżej lub przełącz widok na pełny ekran.</p>
                 </div>
                 <div class="iframe-wrapper">
-                    <iframe 
+                    <iframe
                         id="game-frame"
-                        src="https://markucjusz.github.io/kroniki-cienia/" 
+                        src="https://markucjusz.github.io/kroniki-cienia/"
                         title="Kroniki Cienia - Gra RPG"
                         loading="lazy"
                         allowfullscreen>
                     </iframe>
                 </div>
                 <div class="game-controls-bar">
-                    <button type="button" onclick="reloadGame()" class="btn-small">↻ Odśwież okno gry</button>
-                    <button type="button" onclick="toggleFullscreen()" class="btn-small">⛶ Pełny ekran</button>
+                    <button type="button" id="reload-game" class="btn-small">↻ Odśwież okno gry</button>
+                    <button type="button" id="fullscreen-game" class="btn-small">⛶ Pełny ekran</button>
                 </div>
             </div>
         </section>
 
-        <!-- Sekcja Świat i Fabuła -->
+        <section id="nowosci" class="section news-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Co nowego — wersja 5.1</h2>
+                    <p>Etap 1 skupia się na bezpieczeństwie postępu i powracaniu do gry po nieudanej próbie.</p>
+                </div>
+                <div class="lore-grid">
+                    <article class="card">
+                        <h3>Bezpieczne zapisy</h3>
+                        <p>Starsze dane gry są sprawdzane i uzupełniane o brakujące pola. Niepoprawny zapis nie powinien uszkadzać nowej rozgrywki.</p>
+                    </article>
+                    <article class="card">
+                        <h3>Odzyskiwanie po porażce</h3>
+                        <p>Po przegranej walce można przywrócić ostatni poprawny zapis i wrócić do obozu zamiast rozpoczynać kampanię od nowa.</p>
+                    </article>
+                    <article class="card">
+                        <h3>Kopia uszkodzonych danych</h3>
+                        <p>Uszkodzony zapis jest zachowywany osobno w przeglądarce, co pozwala później analizować problem bez natychmiastowej utraty danych.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
         <section id="swiat" class="section world-section">
             <div class="container">
                 <div class="section-header">
@@ -85,21 +105,20 @@
                 <div class="lore-grid">
                     <article class="card">
                         <h3>Cień nad Krainą</h3>
-                        <p>Po upadku dawnego przymierza granice między światłem a mrokiem zaczęły się zacierać. Wędrowcy, najemnicy i poszukiwacze wiedzy przemierzają zrujnowane trakty, szukając odpowiedzi na to, co obudziło się w głębi zapomnianych ruin.</p>
+                        <p>Granice między światłem a mrokiem zacierały się po upadku dawnego przymierza. Wędrowcy przemierzają ruiny, lasy i kopalnie, szukając sposobu na powstrzymanie Władcy Cienia.</p>
                     </article>
                     <article class="card">
                         <h3>Turowa Taktyka</h3>
-                        <p>Każde starcie wymaga planowania. Zarządzaj zasobami, wykorzystuj zdolności swojej postaci i reaguj na ruchy przeciwników. Przypadek rzadko ratuje życie na nieznanym szlaku.</p>
+                        <p>Planowanie jest ważniejsze niż przypadek. Zwracaj uwagę na zapowiadane ruchy przeciwnika, zarządzaj HP i MP oraz dobieraj blok, przedmioty i umiejętności.</p>
                     </article>
                     <article class="card">
                         <h3>Rozwój i Wybory</h3>
-                        <p>Twoje decyzje kształtują przebieg wyprawy. Zdobywaj doświadczenie, ulepszaj ekwipunek i odkrywaj sekrety świata ukryte poza głównym szlakiem.</p>
+                        <p>Zdobywaj doświadczenie, punkty rozwoju i złoto. Ulepszaj ekwipunek, wyposażaj amulety, realizuj zlecenia i odkrywaj sekrety wyłączonych lokacji.</p>
                     </article>
                 </div>
             </div>
         </section>
 
-        <!-- Sekcja Poradnik i Zapis Gry -->
         <section id="poradnik" class="section guide-section">
             <div class="container">
                 <div class="section-header">
@@ -109,17 +128,20 @@
                 <div class="guide-grid">
                     <div class="card">
                         <h3>1. Eksploracja i Walka</h3>
-                        <p>Zwracaj uwagę na punkty wytrzymałości oraz zasoby przed wejściem na trudniejsze lokacje. Walka odbywa się w systemie turowym — kolejność ruchów i odpowiedni dobór umiejętności decydują o przetrwaniu.</p>
+                        <p>Sprawdzaj zamiar przeciwnika przed wyborem akcji. Blok ogranicza obrażenia i odnowi część many, ale zwykły atak i umiejętność klasy mogą usunąć niebezpieczny status przeciwnika.</p>
                     </div>
                     <div class="card">
-                        <h3>2. Kopia Zapasowa Postaci (Base64)</h3>
-                        <p>Gra zapisuje stan automatycznie w pamięci przeglądarki (LocalStorage). Jeśli czyścisz dane przeglądarki lub chcesz przenieść postać na inne urządzenie, skorzystaj w grze z opcji <strong>Eksportuj zapis</strong> i zachowaj wygenerowany kod tekstowy.</p>
+                        <h3>2. Zapis i Odzyskiwanie</h3>
+                        <p>Stan gry zapisuje się lokalnie w przeglądarce w LocalStorage. Użyj przycisku „Zapisz grę” przed zamknięciem strony. Po porażce wybierz „Odzyskaj ostatni zapis”, jeśli dostępna jest poprawna kopia.</p>
+                    </div>
+                    <div class="card">
+                        <h3>3. Długoterminowe przejście</h3>
+                        <p>Nie biegaj po Cytadeli zbyt wcześnie. Zbieraj doświadczenie i złoto, rozwijaj obronę, kupuj mikstury oraz realizuj zlecenia przed osiągnięciem 6. poziomu.</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Sekcja Dziennik Zmian / Aktualności -->
         <section id="aktualnosci" class="section news-section">
             <div class="container">
                 <div class="section-header">
@@ -128,20 +150,24 @@
                 </div>
                 <div class="timeline">
                     <div class="timeline-item">
-                        <span class="date">Etap 1 — Portal Społeczności</span>
-                        <h4>Uruchomienie bazy wiedzy i miejsca dyskusji</h4>
-                        <p>Oddanie w ręce graczy strony informacyjnej połączonej bezpośrednio z aktualną wersją gry oraz otwarcie sekcji komentarzy dla testerów.</p>
+                        <span class="date">Wersja 5.1 — Etap 1: Stabilność i UX</span>
+                        <h4>Bezpieczniejsze zapisy i odzyskiwanie po porażce</h4>
+                        <p>Dodano migrację starszych zapisów, kontrolę ich poprawności, kopię uszkodzonych danych i możliwość powrotu do ostatniej poprawnej postaci po przegranej.</p>
                     </div>
                     <div class="timeline-item">
-                        <span class="date">Wersja bieżąca</span>
-                        <h4>Rdzeń rozgrywki dostępny online</h4>
-                        <p>Podstawowa mechanika turowa, eksploracja oraz system walki dostępne bez instalacji bezpośrednio w przeglądarce.</p>
+                        <span class="date">Wersja 5.0 — Rdzeń rozgrywki</h4>
+                        <h4>Kompletna kampania turowego RPG</h4>
+                        <p>Dodano trzy klasy, krainy, strażników, finałowego bossa, ekwipunek, amulety, zlecenia, bestiariusz i osiągnięcia.</p>
+                    </div>
+                    <div class="timeline-item">
+                        <span class="date">Kolejne etapy</span>
+                        <h4>Mechanika, kampania i powtarzalność</h4>
+                        <p>Planowane są drzewka umiejętności, nowe przedmioty i przeciwnicy, rozgałęzione wybory, reputacja, zakończenia, Nowa Gra+ oraz warianty trudności.</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Sekcja Komentarze i Zgłoszenia -->
         <section id="komentarze" class="section comments-section">
             <div class="container">
                 <div class="section-header">
@@ -149,28 +175,26 @@
                     <p>Podziel się opinią o rozgrywce, zgłoś błąd lub zaproponuj pomysł na rozwój świata.</p>
                 </div>
 
-                <!-- Pasek zgłaszania błędów na GitHub -->
                 <div class="feedback-bar">
                     <div class="feedback-info">
                         <strong>Znalazłeś błąd w mechanice lub literówkę?</strong>
-                        <span>Zgłoś go bezpośrednio w rejestrze błędów projektu, aby szybciej trafił do poprawki.</span>
+                        <span>Zgłoś go w rejestrze gry, aby trafił do następnej poprawki.</span>
                     </div>
                     <a href="https://github.com/markucjusz/kroniki-cienia/issues/new" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">🐞 Zgłoś błąd na GitHubie ↗</a>
                 </div>
 
-                <!-- Szybki formularz bez logowania (Formspree) -->
                 <div class="card" style="max-width: 820px; margin: 0 auto 36px;">
                     <h3 style="margin-bottom: 6px;">Szybka wiadomość (bez konta GitHub)</h3>
-                    <p style="margin-bottom: 16px; font-size: 0.9rem;">Nie masz konta na GitHubie? Zostaw krótką uwagę lub opinię tutaj — wiadomość trafi bezpośrednio do autora.</p>
-                    <!-- Zastąp TWOJ_KOD_FORMSPREE swoim identyfikatorem z darmowego konta na formspree.io -->
+                    <p style="margin-bottom: 16px; font-size: 0.9rem;">Nie masz konta na GitHubie? Zostaw krótką uwagę lub opinię tutaj.</p>
                     <form action="https://formspree.io/f/TWOJ_KOD_FORMSPREE" method="POST" style="display: flex; flex-direction: column; gap: 12px;">
-                        <input type="text" name="nick" placeholder="Twój nick (opcjonalnie)" style="padding: 10px 14px; border-radius: 6px; border: 1px solid var(--border-color); background: var(--bg-dark); color: var(--text-main); font-family: inherit;">
-                        <textarea name="message" rows="3" required placeholder="Napisz, co sądzisz o grze, jaki błąd zauważyłeś lub co warto dodać..." style="padding: 10px 14px; border-radius: 6px; border: 1px solid var(--border-color); background: var(--bg-dark); color: var(--text-main); font-family: inherit; resize: vertical;"></textarea>
+                        <label for="portal-nick">Twój nick</label>
+                        <input id="portal-nick" type="text" name="nick" placeholder="Twój nick (opcjonalnie)" style="padding: 10px 14px; border-radius: 6px; border: 1px solid var(--border-color); background: var(--bg-card); color: var(--text-primary);">
+                        <label for="portal-message">Wiadomość</label>
+                        <textarea id="portal-message" name="message" rows="3" required placeholder="Napisz, co sądzisz o grze, jaki błąd zauważyłeś lub co warto dodać..." style="padding: 10px 14px; border-radius: 6px; border: 1px solid var(--border-color); background: var(--bg-card); color: var(--text-primary); resize: vertical;"></textarea>
                         <button type="submit" class="btn btn-primary" style="align-self: flex-start; border: none; cursor: pointer;">Wyślij wiadomość</button>
                     </form>
                 </div>
 
-                <!-- Komentarze Giscus (dla posiadaczy konta GitHub) -->
                 <div class="giscus-container">
                     <script src="https://giscus.app/client.js"
                             data-repo="Markucjusz/kroniki-cienia-portal"
@@ -197,34 +221,26 @@
             <p>&copy; 2026 Kroniki Cienia — Projekt by <a href="https://github.com/markucjusz" target="_blank" rel="noopener noreferrer">markucjusz</a></p>
             <div class="other-projects">
                 <span>Inne moje projekty:</span>
-                <a href="https://markucjusz.github.io/Odkrywam-Przyszlosc/" target="_blank" rel="noopener noreferrer" class="project-badge-link">
-                    🚀 Odkrywam Przyszłość — Radar odkryć naukowych, AI i kosmosu ↗
-                </a>
+                <a href="https://markucjusz.github.io/Odkrywam-Przyszlosc/" target="_blank" rel="noopener noreferrer" class="project-badge-link">🚀 Odkrywam Przyszłość — Radar odkryć naukowych, AI i kosmosu ↗</a>
             </div>
         </div>
     </footer>
 
     <script>
-        function reloadGame() {
+        document.getElementById('reload-game').addEventListener('click', () => {
             const frame = document.getElementById('game-frame');
-            if (frame) {
-                frame.src = frame.src;
-            }
-        }
+            if (frame) frame.src = frame.src;
+        });
 
-        function toggleFullscreen() {
+        document.getElementById('fullscreen-game').addEventListener('click', () => {
             const frame = document.getElementById('game-frame');
             if (!frame) return;
-
-            if (frame.requestFullscreen) {
-                frame.requestFullscreen();
-            } else if (frame.webkitRequestFullscreen) {
-                frame.webkitRequestFullscreen();
-            }
-        }
+            if (frame.requestFullscreen) frame.requestFullscreen();
+            else if (frame.webkitRequestFullscreen) frame.webkitRequestFullscreen();
+        });
     </script>
 
-    <!-- Statystyki odwiedzin GoatCounter (odkomentuj po założeniu darmowego konta na goatcounter.com) -->
+    <!-- Statystyki odwiedzin GoatCounter (odkomentuj po utworzeniu konta) -->
     <!-- <script data-goatcounter="https://TWOJA_NAZWA.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script> -->
 
 </body>
